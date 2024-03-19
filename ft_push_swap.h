@@ -49,12 +49,9 @@ void ft_rev_rotate(t_stack *stack);
 void safe_free(void **ptr);
 t_stack *ft_push_swap(t_stack *stack_a, t_stack *stack_b);
 t_stack *ft_stack_of_three(t_stack *stack);
-void ft_populate_stack_b(t_stack *stack_a, t_stack *stack_b);
-void ft_populate_stack_a(t_stack *stack_a, t_stack *stack_b);
 t_bool ft_check_sorted(t_stack *stack);
 void ft_find_min(t_stack *stack);
 void ft_find_max(t_stack *stack);
 int ft_position(t_stack *stack, int data);
-t_chosen *ft_create_chosen();
 
 #endif

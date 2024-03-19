@@ -1,5 +1,4 @@
 SRCS			= utils/stack.c utils/index.c utils/ft_stack_of_three.c utils/ft_populate_stack_a.c  utils/ft_populate_stack_b.c \
-				  utils/utils1.c \
 				  operations/push.c  operations/swap.c operations/rotate.c operations/rev_rotate.c ft_push_swap.c main.c
 
 OBJS			= $(SRCS:.c=.o)

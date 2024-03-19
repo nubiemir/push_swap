@@ -60,15 +60,3 @@ void ft_find_max(t_stack *stack)
     }
     stack->max = max;
 }
-
-t_chosen *ft_create_chosen()
-{
-    t_chosen *chosen_node;
-
-    chosen_node = (t_chosen *)malloc(sizeof(t_chosen));
-    if (!chosen_node)
-        return (NULL);
-    chosen_node->position_a = -1;
-    chosen_node->position_b = -1;
-    return (chosen_node);
-}

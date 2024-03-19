@@ -1,6 +1,5 @@
 #include "../ft_push_swap.h"
 
-
 t_stack *ft_stack_of_two(t_stack *stack)
 {
     if (!stack)
