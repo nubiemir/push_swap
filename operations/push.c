@@ -1,4 +1,5 @@
 #include "../ft_push_swap.h"
+#include <stdio.h>
 
 void    ft_push_b(t_stack *stack_a, t_stack *stack_b)
 {

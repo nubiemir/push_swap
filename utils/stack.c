@@ -1,4 +1,5 @@
 #include "../ft_push_swap.h"
+#include <stdio.h>
 
 t_node *ft_create_node(int data)
 {
