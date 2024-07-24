@@ -1,8 +1,6 @@
 
 #include "../ft_push_swap.h"
 
-
-
 void    ft_arr_swap(int *arr, int idx1, int idx2)
 {
     int tmp;
@@ -45,7 +43,8 @@ void    qs(int *arr, int low, int high)
 
 
 
-void    ft_quick_sort(int *arr, int len)
+int    *ft_quick_sort(int *arr, int len)
 {
     qs(arr, 0, len - 1);
+    return arr;
 }

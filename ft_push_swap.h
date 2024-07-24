@@ -10,6 +10,7 @@ typedef struct node
     struct node *next;
     struct node *prev;
     int data;
+    int binary[32];
 } t_node;
 
 typedef struct stack
@@ -26,8 +27,8 @@ typedef struct stack
 #define t_bool int
 
 t_stack     *ft_create_stack();
-void        ft_push_stack(t_stack *stack, int data);
-t_node      *ft_create_node(int data);
+void        ft_push_stack(t_stack *stack, t_node *new_node);
+t_node      *ft_create_node(int data, int binary[32]);
 t_node      *ft_pop_stack(t_stack *stack);
 void        ft_push_a(t_stack *stack_a, t_stack *stack_b);
 void        ft_push_b(t_stack *stack_a, t_stack *stack_b);
@@ -48,6 +49,8 @@ void        ft_find_min(t_stack *stack);
 void        ft_find_max(t_stack *stack);
 void        ft_populate_stack_a(t_stack *stack_a, t_stack *stack_b);
 void        ft_populate_stack_b(int *arr, t_stack *stack_a, t_stack *stack_b);
-void        ft_quick_sort(int *arr, int len);
+int         *ft_quick_sort(int *arr, int len);
+int         ft_binary_search(int *arr, int len, int value);
+void        ft_to_binary(int arr[32], int num);
 
 #endif
