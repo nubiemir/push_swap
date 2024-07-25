@@ -1,6 +1,6 @@
-SRCS			= utils/stack.c utils/index.c utils/ft_stack_of_three.c utils/ft_populate_stack_a.c  utils/ft_populate_stack_b.c \
-				  utils/ft_quick_sort.c \
-				  operations/push.c  operations/swap.c operations/rotate.c operations/rev_rotate.c ft_push_swap.c main.c
+SRCS			= utils/stack.c utils/helpers.c algorithms/ft_stack_of_three.c algorithms/ft_populate_stack_a.c  algorithms/ft_populate_stack_b.c \
+				  algorithms/ft_quick_sort.c algorithms/ft_binary_search.c algorithms/ft_to_binary.c \
+				  commands/push.c  commands/swap.c commands/rotate.c commands/rev_rotate.c ft_push_swap.c main.c
 
 OBJS			= $(SRCS:.c=.o)
 

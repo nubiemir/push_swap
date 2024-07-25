@@ -5,7 +5,6 @@ void    ft_swap_a(t_stack *stack)
     if (stack && stack->size > 1)
     {
         ft_swap(stack);
-        printf("sa\n");
     }
 }
 
@@ -14,7 +13,6 @@ void    ft_swap_b(t_stack *stack)
     if (stack && stack->size > 1)
     {
         ft_swap(stack);
-        printf("sb\n");
     }
 }
 

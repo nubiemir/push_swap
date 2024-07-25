@@ -5,7 +5,6 @@ void    ft_rotate_a(t_stack *stack)
     if (stack && stack->size > 1)
     {
         ft_rotate(stack);
-        printf("ra\n");
     }
 }
 
@@ -14,7 +13,6 @@ void    ft_rotate_b(t_stack *stack)
     if (stack && stack->size > 1)
     {
         ft_rotate(stack);
-        printf("rb\n");
     }
 }
 

@@ -1,33 +1,33 @@
 #include "../ft_push_swap.h"
 #include <stdio.h>
 
-t_node *ft_create_node(int data)
+t_node *ft_create_node(int data, int binary[32])
 {
     t_node *new_node;
 
     new_node = (t_node *)malloc(sizeof(t_node));
     if (!new_node)
         return (NULL);
+    for(int i =0; i <= 31; i++)
+        new_node->binary[i] = binary[i];
     new_node->data = data;
     new_node->next = NULL;
     new_node->prev = NULL;
     return (new_node);
 }
 
-void ft_push_stack(t_stack *stack, int data)
+void ft_push_stack(t_stack *stack, t_node *new_node)
 {
-    t_node *new_node;
     t_node *tmp_node;
 
-    new_node = ft_create_node(data);
     if (!stack->size)
     {
         stack->head = new_node;
         stack->tail = new_node;
         stack->head->next = stack->tail;
         stack->head->prev = stack->tail;
-        stack->min = data;
-        stack->max = data;
+        // stack->min = data;
+        // stack->max = data;
     }
     else
     {
@@ -37,10 +37,10 @@ void ft_push_stack(t_stack *stack, int data)
         stack->head->prev = stack->tail;
         tmp_node->prev = new_node;
         stack->tail->next = stack->head;
-        if (stack->min > data)
-            stack->min = data;
-        if (stack->max < data)
-            stack->max = data;
+        // if (stack->min > data)
+        //     stack->min = data;
+        // if (stack->max < data)
+        //     stack->max = data;
     }
     stack->size += 1;
 }
@@ -64,10 +64,10 @@ t_node *ft_pop_stack(t_stack *stack)
             stack->head = node->next;
             stack->head->prev = stack->tail;
             stack->tail->next = stack->head;
-            if (node->data == stack->min)
-                ft_find_min(stack);
-            if (node->data == stack->max)
-                ft_find_max(stack);
+            // if (node->data == stack->min)
+            //     ft_find_min(stack);
+            // if (node->data == stack->max)
+            //     ft_find_max(stack);
         }
         node->next = NULL;
         node->prev = NULL;
@@ -99,10 +99,10 @@ int ft_position(t_stack *stack, int data)
 
     idx = 0;
     ptr = stack->head;
-    while (ptr->data != stack->tail->data && ptr->data != data)
-    {
-        ptr = ptr->next;
-        idx++;
-    }
+    // while (ptr->data != stack->tail->data && ptr->data != data)
+    // {
+    //     ptr = ptr->next;
+    //     idx++;
+    // }
     return (idx);
 }
