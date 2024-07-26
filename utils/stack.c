@@ -26,8 +26,6 @@ void ft_push_stack(t_stack *stack, t_node *new_node)
         stack->tail = new_node;
         stack->head->next = stack->tail;
         stack->head->prev = stack->tail;
-        // stack->min = data;
-        // stack->max = data;
     }
     else
     {
@@ -37,10 +35,6 @@ void ft_push_stack(t_stack *stack, t_node *new_node)
         stack->head->prev = stack->tail;
         tmp_node->prev = new_node;
         stack->tail->next = stack->head;
-        // if (stack->min > data)
-        //     stack->min = data;
-        // if (stack->max < data)
-        //     stack->max = data;
     }
     stack->size += 1;
 }
@@ -64,10 +58,6 @@ t_node *ft_pop_stack(t_stack *stack)
             stack->head = node->next;
             stack->head->prev = stack->tail;
             stack->tail->next = stack->head;
-            // if (node->data == stack->min)
-            //     ft_find_min(stack);
-            // if (node->data == stack->max)
-            //     ft_find_max(stack);
         }
         node->next = NULL;
         node->prev = NULL;
@@ -90,19 +80,4 @@ t_stack *ft_create_stack()
     new_stack->min = 0;
     new_stack->max = 0;
     return (new_stack);
-}
-
-int ft_position(t_stack *stack, int data)
-{
-    t_node *ptr;
-    int idx;
-
-    idx = 0;
-    ptr = stack->head;
-    // while (ptr->data != stack->tail->data && ptr->data != data)
-    // {
-    //     ptr = ptr->next;
-    //     idx++;
-    // }
-    return (idx);
 }

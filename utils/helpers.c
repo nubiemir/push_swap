@@ -1,4 +1,35 @@
 #include "../ft_push_swap.h"
+#include <stdio.h>
+
+
+int  ft_max_digit(t_stack *stack)
+{
+    int i;
+    int max;
+    t_node *tmp_node;
+    t_node *result;
+
+    tmp_node = stack->head;
+    max = 0;
+    i = 0;
+    while (i <= stack->size - 1)
+    {
+        if (tmp_node->data > max)
+        {
+            max = tmp_node->data;
+            result = tmp_node;
+        }
+        tmp_node = tmp_node->next;
+        i++;
+    }
+
+    i = 0;
+    while (i++ <= 31) {
+        if (result->binary[i] == 1)
+            return (32 - i);
+    }
+    return (32 - i);
+}
 
 void safe_free(void **ptr)
 {
@@ -21,42 +52,4 @@ t_bool ft_check_sorted(t_stack *stack)
     }
 
     return (True);
-}
-
-void ft_find_min(t_stack *stack)
-{
-    t_node *ptr;
-    int idx;
-    int min;
-
-    ptr = stack->head;
-    min = ptr->data;
-    idx = 0;
-    while (idx < stack->size)
-    {
-        ptr = ptr->next;
-        if (min > ptr->data)
-            min = ptr->data;
-        idx++;
-    }
-    stack->min = min;
-}
-
-void ft_find_max(t_stack *stack)
-{
-    t_node *ptr;
-    int idx;
-    int max;
-
-    ptr = stack->head;
-    max = ptr->data;
-    idx = 0;
-    while (idx < stack->size)
-    {
-        ptr = ptr->next;
-        if (max < ptr->data)
-            max = ptr->data;
-        idx++;
-    }
-    stack->max = max;
 }

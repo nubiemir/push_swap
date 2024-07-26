@@ -52,5 +52,6 @@ void        ft_populate_stack_b(int *arr, t_stack *stack_a, t_stack *stack_b);
 int         *ft_quick_sort(int *arr, int len);
 int         ft_binary_search(int *arr, int len, int value);
 void        ft_to_binary(int arr[32], int num);
+int         ft_max_digit(t_stack *stack);
 
 #endif
